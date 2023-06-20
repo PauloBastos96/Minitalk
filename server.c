@@ -6,7 +6,7 @@
 /*   By: paulorod <paulorod@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 15:31:58 by paulorod          #+#    #+#             */
-/*   Updated: 2023/06/20 11:52:47 by paulorod         ###   ########.fr       */
+/*   Updated: 2023/06/20 12:40:00 by paulorod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ static void	receive_data(int signum, siginfo_t *info, void *context)
 	}
 	else
 		character <<= 1;
-	kill(info->si_pid, SIGUSR1);
 }
 
 /*Initialize server*/

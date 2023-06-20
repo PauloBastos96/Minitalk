@@ -6,7 +6,7 @@
 /*   By: paulorod <paulorod@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 15:32:09 by paulorod          #+#    #+#             */
-/*   Updated: 2023/06/19 16:30:15 by paulorod         ###   ########.fr       */
+/*   Updated: 2023/06/20 12:30:28 by paulorod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ void	send_data(int pid, char *str)
 				kill(pid, SIGUSR2);
 			else
 				kill(pid, SIGUSR1);
-			pause();
+			usleep(100);
 		}
 	}
 	i = 8;
 	while (i--)
 	{
 		kill(pid, SIGUSR1);
-		pause();
+		usleep(100);
 	}
 }
 
